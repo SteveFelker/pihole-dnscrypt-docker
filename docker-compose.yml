@@ -31,9 +31,9 @@ services:
       - "443:443/tcp"
     environment:
       # TZ: ''
-      # WEBPASSWORD: ''
-      DNS1: "10.0.1.2#5300"
-      DNS2: "no"
+      FTLCONF_webserver_api_password: "changeme"
+      FTLCONF_dns_listeningMode: "ALL"
+      FTLCONF_dns_upstreams: "10.0.1.2#5300"
     volumes:
        - './etc-pihole/:/etc/pihole/'
        - './etc-dnsmasq.d/:/etc/dnsmasq.d/'
